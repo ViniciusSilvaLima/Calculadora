@@ -1,0 +1,180 @@
+/* Estilos gerais do corpo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s;
+}
+
+/* Tema Escuro */
+.theme-dark {
+    background-color: #0e314c;
+}
+
+/* Tema Claro */
+.theme-light {
+    background-color: #f0f0f0;
+}
+
+/* Calculadora */
+.calculator {
+    width: 400px;
+    border: 2px solid #00adb5;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #033649;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.calculator:hover {
+    box-shadow: 0 0 20px #00adb5;
+}
+
+.theme-light .calculator {
+    background-color: #e0e0e0;
+    border-color: #ffcc29; /* Cor da borda laranja no modo claro */
+}
+
+.theme-light .calculator:hover {
+    box-shadow: 0 0 20px #ffcc29; /* Sombra laranja ao passar o mouse no modo claro */
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 10px;
+    text-align: right;
+    padding: 10px;
+    background-color: #00adb5;
+    color: #000;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+}
+
+.theme-light .calculator-screen {
+    background-color: #f0f0f0;
+}
+
+/* Botões */
+.btn {
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    font-size: 24px;
+    border: 1px solid #00adb5;
+    color: #00adb5;
+    background-color: transparent;
+    transition: opacity 0.3s ease, color 0.3s, border-color 0.3s; /* Transições suaves */
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.7; /* Reduz a opacidade ao passar o mouse */
+}
+
+.theme-light .btn {
+    border-color: #ffcc29; /* Borda laranja no modo claro */
+    color: #ffcc29; /* Cor do texto no modo claro */
+}
+
+.theme-light .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.theme-light .btn-dark {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.theme-light .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.theme-light .btn-warning {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.theme-light .btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Botão de Alternância de Tema */
+.theme-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adiciona espaço entre os ícones */
+    width: 100px; /* Diminuir a largura do botão */
+    height: 40px; /* Diminuir a altura do botão */
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 0 10px; /* Adiciona espaçamento interno */
+    transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s; /* Adiciona transição de opacidade */
+}
+
+.theme-toggle-btn:hover {
+    opacity: 0.7; /* Define opacidade ao passar o mouse */
+}
+
+.theme-toggle-btn:focus {
+    opacity: 0.7; /* Define opacidade ao focar */
+}
+
+.theme-toggle-btn:active {
+    opacity: 1; /* Retorna opacidade ao clicar */
+}
+
+.theme-light .theme-toggle-btn {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle */
+.toggle {
+    height: 30px; /* Ajustar a altura do toggle */
+    width: 30px; /* Ajustar a largura do toggle */
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    transition: left 0.3s, background-color 0.3s;
+    left: 5px;
+}
+
+.theme-light .toggle {
+    left: 65px; /* Ajustar a posição do toggle para o tema claro */
+    background-color: #ffcc29; /* Cor do LED laranja no modo claro */
+}
+
+/* Ícones */
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Ajustar a largura do ícone */
+    height: 30px; /* Ajustar a altura do ícone */
+    color: #00adb5; /* Cor do LED azul no modo escuro */
+    font-size: 18px; /* Ajustar o tamanho da fonte do ícone */
+}
+
+.theme-light .icon {
+    color: #ffcc29; /* Cor do LED laranja no modo claro */
+}
+
+.theme-light .icon:first-child {
+    order: 0; /* Manter a ordem do ícone do sol */
+}
+
+.theme-light .icon:last-child {
+    order: 1; /* Manter a ordem do ícone da lua */
+}
